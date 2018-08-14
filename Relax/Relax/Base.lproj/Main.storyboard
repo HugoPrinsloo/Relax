@@ -102,7 +102,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="midBlue"/>
                         <constraints>
                             <constraint firstItem="jzY-UL-2kz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Azp-Fy-eqF"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jzY-UL-2kz" secondAttribute="trailing" id="eHp-19-mWz"/>
@@ -136,10 +136,10 @@
             </objects>
             <point key="canvasLocation" x="972" y="1404"/>
         </scene>
-        <!--Shelf View Controller-->
+        <!--New Shelf View Controller-->
         <scene sceneID="IdM-1F-i81">
             <objects>
-                <viewController id="tmB-pN-2g7" customClass="ShelfViewController" customModule="Relax" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="tmB-pN-2g7" customClass="NewShelfViewController" customModule="Relax" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8Fe-bH-E3q">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -185,6 +185,7 @@
                             <constraint firstAttribute="trailing" secondItem="xWj-9p-sTh" secondAttribute="trailing" id="g4D-v5-7oU"/>
                             <constraint firstItem="xWj-9p-sTh" firstAttribute="topMargin" secondItem="Yv6-32-mTk" secondAttribute="bottom" constant="4" id="wS9-PO-4mG"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="sUc-rO-KAt"/>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="xWj-9p-sTh" id="sU4-f1-EnE"/>
@@ -194,10 +195,10 @@
             </objects>
             <point key="canvasLocation" x="1839" y="94"/>
         </scene>
-        <!--Shelf View Controller-->
+        <!--New Shelf View Controller-->
         <scene sceneID="VkY-jn-eEA">
             <objects>
-                <viewController id="g5l-zJ-jb4" customClass="ShelfViewController" customModule="Relax" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="g5l-zJ-jb4" customClass="NewShelfViewController" customModule="Relax" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zNX-ya-BJ9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -253,10 +254,10 @@
             </objects>
             <point key="canvasLocation" x="1838" y="596"/>
         </scene>
-        <!--Shelf View Controller-->
+        <!--Ocean View Controller-->
         <scene sceneID="uOs-Ca-Aca">
             <objects>
-                <viewController id="CsY-K8-4Mh" customClass="ShelfViewController" customModule="Relax" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="CsY-K8-4Mh" customClass="OceanViewController" customModule="Relax" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RTu-n9-4yg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -281,8 +282,8 @@
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
-                                    <outlet property="dataSource" destination="CsY-K8-4Mh" id="wFY-i1-DrS"/>
-                                    <outlet property="delegate" destination="CsY-K8-4Mh" id="b0z-lY-QLF"/>
+                                    <outlet property="dataSource" destination="CsY-K8-4Mh" id="vnQ-CI-3Ch"/>
+                                    <outlet property="delegate" destination="CsY-K8-4Mh" id="EQH-GQ-72h"/>
                                 </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gof-xO-lzt">
@@ -305,7 +306,7 @@
                         <viewLayoutGuide key="safeArea" id="nDF-CT-sAi"/>
                     </view>
                     <connections>
-                        <outlet property="collectionView" destination="3cQ-3G-QCU" id="VcH-eh-jvE"/>
+                        <outlet property="collectionView" destination="3cQ-3G-QCU" id="6ep-9k-N9N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="afK-tE-f8X" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -318,6 +319,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="c9S-Ou-vcf" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="UXp-Xk-gpM">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" name="washoutBlue"/>

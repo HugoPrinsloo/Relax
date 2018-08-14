@@ -8,28 +8,30 @@
 
 import UIKit
 
-class ShelfViewController: UIViewController {
+class NewShelfViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    private var items: [RelaxObject] = RelaxSampleData.items
+    
     override func viewDidLoad() {
-        super.viewDidLoad()      
+        super.viewDidLoad()
         collectionView.register(UINib(nibName: "RelaxContentCell", bundle: nil), forCellWithReuseIdentifier: "Cell")
     }
 }
 
-extension ShelfViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension NewShelfViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return items.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! RelaxContentCell
-        
+        cell.configure(with: items[indexPath.item])
         return cell
     }
 }

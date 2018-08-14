@@ -20,13 +20,16 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title of content" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vc7-fi-HIL">
-                        <rect key="frame" x="0.0" y="141.5" width="315" height="14.5"/>
+                        <rect key="frame" x="0.0" y="140" width="315" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="sIi-eV-Cj6"/>
+                        </constraints>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                         <color key="textColor" name="washoutBlue"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cZD-i2-xsk">
-                        <rect key="frame" x="0.0" y="0.0" width="315" height="137.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="315" height="136"/>
                     </imageView>
                 </subviews>
             </view>
@@ -43,6 +46,7 @@
             <size key="customSize" width="315" height="156"/>
             <connections>
                 <outlet property="coverImageView" destination="cZD-i2-xsk" id="5kR-FK-Dtr"/>
+                <outlet property="titleLabel" destination="vc7-fi-HIL" id="gSZ-Z0-GrB"/>
             </connections>
             <point key="canvasLocation" x="166.5" y="107"/>
         </collectionViewCell>

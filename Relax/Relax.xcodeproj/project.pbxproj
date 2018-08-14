@@ -15,7 +15,9 @@
 		6E2F197B2123033200D3D1FB /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2F197A2123033200D3D1FB /* Colors.swift */; };
 		6E2F197F2123064600D3D1FB /* RelaxContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2F197D2123064600D3D1FB /* RelaxContentCell.swift */; };
 		6E2F19802123064600D3D1FB /* RelaxContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E2F197E2123064600D3D1FB /* RelaxContentCell.xib */; };
-		6E2F198321230C4600D3D1FB /* ShelfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2F198221230C4600D3D1FB /* ShelfViewController.swift */; };
+		6E2F198321230C4600D3D1FB /* NewShelfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2F198221230C4600D3D1FB /* NewShelfViewController.swift */; };
+		6E2F198521231D0D00D3D1FB /* RelaxObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2F198421231D0D00D3D1FB /* RelaxObject.swift */; };
+		6E2F1987212322C100D3D1FB /* OceanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2F1986212322C100D3D1FB /* OceanViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +31,9 @@
 		6E2F197A2123033200D3D1FB /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		6E2F197D2123064600D3D1FB /* RelaxContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelaxContentCell.swift; sourceTree = "<group>"; };
 		6E2F197E2123064600D3D1FB /* RelaxContentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RelaxContentCell.xib; sourceTree = "<group>"; };
-		6E2F198221230C4600D3D1FB /* ShelfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelfViewController.swift; sourceTree = "<group>"; };
+		6E2F198221230C4600D3D1FB /* NewShelfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewShelfViewController.swift; sourceTree = "<group>"; };
+		6E2F198421231D0D00D3D1FB /* RelaxObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelaxObject.swift; sourceTree = "<group>"; };
+		6E2F1986212322C100D3D1FB /* OceanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OceanViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +68,9 @@
 			children = (
 				6E2F19682122FFE100D3D1FB /* AppDelegate.swift */,
 				6E2F196A2122FFE100D3D1FB /* HomeViewController.swift */,
-				6E2F198221230C4600D3D1FB /* ShelfViewController.swift */,
+				6E2F198221230C4600D3D1FB /* NewShelfViewController.swift */,
+				6E2F1986212322C100D3D1FB /* OceanViewController.swift */,
+				6E2F198421231D0D00D3D1FB /* RelaxObject.swift */,
 				6E2F19812123064B00D3D1FB /* Views */,
 				6E2F197C212305A800D3D1FB /* UI extensions */,
 				6E2F196C2122FFE100D3D1FB /* Main.storyboard */,
@@ -165,10 +171,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E2F197F2123064600D3D1FB /* RelaxContentCell.swift in Sources */,
-				6E2F198321230C4600D3D1FB /* ShelfViewController.swift in Sources */,
+				6E2F198321230C4600D3D1FB /* NewShelfViewController.swift in Sources */,
 				6E2F196B2122FFE100D3D1FB /* HomeViewController.swift in Sources */,
+				6E2F198521231D0D00D3D1FB /* RelaxObject.swift in Sources */,
 				6E2F197B2123033200D3D1FB /* Colors.swift in Sources */,
 				6E2F19692122FFE100D3D1FB /* AppDelegate.swift in Sources */,
+				6E2F1987212322C100D3D1FB /* OceanViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

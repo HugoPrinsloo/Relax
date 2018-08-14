@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  OceanViewController.swift
 //  Relax
 //
 //  Created by Hugo Prinsloo on 2018/08/14.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class OceanViewController: UIViewController {
     private var items: [RelaxObject] = RelaxSampleData.items
-    
+
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
@@ -19,7 +19,7 @@ class HomeViewController: UIViewController {
     }
 }
 
-extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension OceanViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
