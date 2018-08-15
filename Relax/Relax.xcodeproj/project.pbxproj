@@ -18,6 +18,8 @@
 		6E2F198321230C4600D3D1FB /* NewShelfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2F198221230C4600D3D1FB /* NewShelfViewController.swift */; };
 		6E2F198521231D0D00D3D1FB /* RelaxObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2F198421231D0D00D3D1FB /* RelaxObject.swift */; };
 		6E2F1987212322C100D3D1FB /* OceanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2F1986212322C100D3D1FB /* OceanViewController.swift */; };
+		6EB140932124A13B00746A1F /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB140922124A13B00746A1F /* CloudKit.framework */; };
+		6EB140952124B4E400746A1F /* NatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB140942124B4E400746A1F /* NatureViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,9 @@
 		6E2F198221230C4600D3D1FB /* NewShelfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewShelfViewController.swift; sourceTree = "<group>"; };
 		6E2F198421231D0D00D3D1FB /* RelaxObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelaxObject.swift; sourceTree = "<group>"; };
 		6E2F1986212322C100D3D1FB /* OceanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OceanViewController.swift; sourceTree = "<group>"; };
+		6EB140902124A13900746A1F /* Relax.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Relax.entitlements; sourceTree = "<group>"; };
+		6EB140922124A13B00746A1F /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		6EB140942124B4E400746A1F /* NatureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatureViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EB140932124A13B00746A1F /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +58,7 @@
 			children = (
 				6E2F19672122FFE100D3D1FB /* Relax */,
 				6E2F19662122FFE100D3D1FB /* Products */,
+				6EB140912124A13B00746A1F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,10 +73,12 @@
 		6E2F19672122FFE100D3D1FB /* Relax */ = {
 			isa = PBXGroup;
 			children = (
+				6EB140902124A13900746A1F /* Relax.entitlements */,
 				6E2F19682122FFE100D3D1FB /* AppDelegate.swift */,
 				6E2F196A2122FFE100D3D1FB /* HomeViewController.swift */,
 				6E2F198221230C4600D3D1FB /* NewShelfViewController.swift */,
 				6E2F1986212322C100D3D1FB /* OceanViewController.swift */,
+				6EB140942124B4E400746A1F /* NatureViewController.swift */,
 				6E2F198421231D0D00D3D1FB /* RelaxObject.swift */,
 				6E2F19812123064B00D3D1FB /* Views */,
 				6E2F197C212305A800D3D1FB /* UI extensions */,
@@ -96,6 +105,14 @@
 				6E2F197E2123064600D3D1FB /* RelaxContentCell.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		6EB140912124A13B00746A1F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6EB140922124A13B00746A1F /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,6 +147,14 @@
 				TargetAttributes = {
 					6E2F19642122FFE100D3D1FB = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -173,6 +198,7 @@
 				6E2F197F2123064600D3D1FB /* RelaxContentCell.swift in Sources */,
 				6E2F198321230C4600D3D1FB /* NewShelfViewController.swift in Sources */,
 				6E2F196B2122FFE100D3D1FB /* HomeViewController.swift in Sources */,
+				6EB140952124B4E400746A1F /* NatureViewController.swift in Sources */,
 				6E2F198521231D0D00D3D1FB /* RelaxObject.swift in Sources */,
 				6E2F197B2123033200D3D1FB /* Colors.swift in Sources */,
 				6E2F19692122FFE100D3D1FB /* AppDelegate.swift in Sources */,
@@ -322,6 +348,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Relax/Relax.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7VT5H6VPXH;
 				INFOPLIST_FILE = Relax/Info.plist;
@@ -340,6 +367,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Relax/Relax.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7VT5H6VPXH;
 				INFOPLIST_FILE = Relax/Info.plist;

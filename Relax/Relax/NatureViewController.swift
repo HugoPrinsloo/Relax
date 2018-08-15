@@ -1,18 +1,18 @@
 //
-//  OceanViewController.swift
+//  NatureViewController.swift
 //  Relax
 //
-//  Created by Hugo Prinsloo on 2018/08/14.
+//  Created by Hugo Prinsloo on 2018/08/15.
 //  Copyright © 2018 Hugo. All rights reserved.
 //
 
 import UIKit
 
-class OceanViewController: UIViewController {
-    
-    private let contentManager = RelaxContentManager()
-    private let type: Type = .ocean
+class NatureViewController: UIViewController {
 
+    private let contentManager = RelaxContentManager()
+    private let type: Type = .nature
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
@@ -26,7 +26,7 @@ class OceanViewController: UIViewController {
     }
 }
 
-extension OceanViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension NatureViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -40,4 +40,7 @@ extension OceanViewController: UICollectionViewDelegate, UICollectionViewDataSou
         cell.configure(with: contentManager.itemAtIndex(indexPath.item, type: type))
         return cell
     }
+    
+    
 }
+

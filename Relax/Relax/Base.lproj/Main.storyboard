@@ -195,10 +195,10 @@
             </objects>
             <point key="canvasLocation" x="1838" y="340"/>
         </scene>
-        <!--New Shelf View Controller-->
+        <!--Nature View Controller-->
         <scene sceneID="VkY-jn-eEA">
             <objects>
-                <viewController id="g5l-zJ-jb4" customClass="NewShelfViewController" customModule="Relax" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="g5l-zJ-jb4" customClass="NatureViewController" customModule="Relax" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zNX-ya-BJ9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -247,7 +247,7 @@
                         <viewLayoutGuide key="safeArea" id="1Fn-2I-NQZ"/>
                     </view>
                     <connections>
-                        <outlet property="collectionView" destination="zng-RV-VgD" id="K9C-EE-QjD"/>
+                        <outlet property="collectionView" destination="zng-RV-VgD" id="8AW-3x-ajG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WZ9-mk-nWK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -286,7 +286,7 @@
                                     <outlet property="delegate" destination="CsY-K8-4Mh" id="EQH-GQ-72h"/>
                                 </connections>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gof-xO-lzt">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ocean" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gof-xO-lzt">
                                 <rect key="frame" x="16" y="0.0" width="343" height="18"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                 <color key="textColor" name="washoutBlue"/>
