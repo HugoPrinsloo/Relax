@@ -10,7 +10,7 @@ import UIKit
 
 class RelaxContentCell: UICollectionViewCell {
 
-    @IBOutlet private weak var coverImageView: UIImageView!
+    @IBOutlet weak var coverImageView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
     
     override func awakeFromNib() {
@@ -21,7 +21,7 @@ class RelaxContentCell: UICollectionViewCell {
     }
     
     func configure(with relaxObject: RelaxObject) {
-        coverImageView.image = relaxObject.coverImage
-        titleLabel.text = relaxObject.title
+//        coverImageView.image = relaxObject.coverImage
+//        titleLabel.text = relaxObject.title
     }
 }
