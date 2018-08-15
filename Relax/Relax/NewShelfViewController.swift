@@ -12,7 +12,6 @@ class NewShelfViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    private var items: [RelaxObject] = RelaxSampleData.items
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,12 +25,11 @@ extension NewShelfViewController: UICollectionViewDelegate, UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return items.count
+        return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! RelaxContentCell
-        cell.configure(with: items[indexPath.item])
         return cell
     }
 }

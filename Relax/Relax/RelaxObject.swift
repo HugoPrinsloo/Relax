@@ -9,12 +9,6 @@
 import UIKit
 import CloudKit
 
-struct RelaxObject {
-    let title: String
-    let coverImage: UIImage
-
-}
-
 enum Type {
     case featured
     case nature
@@ -22,7 +16,7 @@ enum Type {
     case unknown
 }
 
-struct RelaxFile {
+struct RelaxObject {
     
     let title: String
     let thumbnailURL: String
@@ -55,7 +49,7 @@ struct RelaxFile {
 
 class RelaxContentManager {
     private let container = CKContainer.default()
-    private var items: [RelaxFile] = []
+    private var items: [RelaxObject] = []
 
     func fetch(completion: @escaping (() -> Void)) {
         let predicate = NSPredicate(value: true)
@@ -64,7 +58,7 @@ class RelaxContentManager {
         container.publicCloudDatabase.perform(query, inZoneWith: nil) { (records, error) in
             if let records = records {
                 for record in records {
-                    self.items.append(RelaxFile(record: record))
+                    self.items.append(RelaxObject(record: record))
                     print(self.items)
                 }
                 completion()
@@ -72,7 +66,7 @@ class RelaxContentManager {
         }
     }
     
-    func itemAtIndex(_ index: Int, type: Type) -> RelaxFile {
+    func itemAtIndex(_ index: Int, type: Type) -> RelaxObject {
         if type == .featured {
             let i = items.filter({ $0.featured == true })
             return i[index]
@@ -91,22 +85,3 @@ class RelaxContentManager {
     }
 }
 
-
-struct RelaxSampleData {
-    static let items: [RelaxObject] = [RelaxObject(title: "Docks", coverImage: UIImage(named: "docks")!),
-                                RelaxObject(title: "Camp fire", coverImage: UIImage(named: "fire")!),
-                                RelaxObject(title: "Forest", coverImage: UIImage(named: "forest")!),
-                                RelaxObject(title: "Ocean drive", coverImage: UIImage(named: "ocean")!),
-                                RelaxObject(title: "Wind", coverImage: UIImage(named: "wind")!),
-                                RelaxObject(title: "Some title", coverImage: UIImage(named: "sample1")!),
-                                RelaxObject(title: "Some title", coverImage: UIImage(named: "sample2")!),
-                                RelaxObject(title: "Some title", coverImage: UIImage(named: "sample3")!),
-                                RelaxObject(title: "Some title", coverImage: UIImage(named: "sample4")!),
-                                RelaxObject(title: "Some title", coverImage: UIImage(named: "sample5")!),
-                                RelaxObject(title: "Some title", coverImage: UIImage(named: "sample6")!),
-                                RelaxObject(title: "Some title", coverImage: UIImage(named: "sample7")!),
-                                RelaxObject(title: "Some title", coverImage: UIImage(named: "sample8")!),
-                                RelaxObject(title: "Some title", coverImage: UIImage(named: "sample9")!),
-                                RelaxObject(title: "Some title", coverImage: UIImage(named: "sample10")!),
-]
-}

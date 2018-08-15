@@ -15,19 +15,15 @@ class RelaxContentCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        coverImageView.backgroundColor = Color.heartRed
+        coverImageView.backgroundColor = Color.washoutBlue
         coverImageView.layer.cornerRadius = 8
         coverImageView.clipsToBounds = true
     }
     
     func configure(with relaxObject: RelaxObject) {
-    }
-    
-    func configure(with relaxObject: RelaxFile) {
         coverImageView.downloadedFrom(url: URL(string: relaxObject.thumbnailURL)!)
         titleLabel.text = relaxObject.title
     }
-
 }
 
 extension UIImageView {
