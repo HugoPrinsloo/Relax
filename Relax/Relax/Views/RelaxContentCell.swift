@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class RelaxContentCell: UICollectionViewCell {
 
@@ -15,34 +16,15 @@ class RelaxContentCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+            coverImageView.layer.cornerRadius = 8
+            coverImageView.clipsToBounds = true
         coverImageView.backgroundColor = Color.washoutBlue
-        coverImageView.layer.cornerRadius = 8
-        coverImageView.clipsToBounds = true
     }
     
     func configure(with relaxObject: RelaxObject) {
-        coverImageView.downloadedFrom(url: URL(string: relaxObject.thumbnailURL)!)
+        coverImageView.sd_setImage(with: URL(string: relaxObject.thumbnailURL), placeholderImage: UIImage(named: "placeholder"), options: [.continueInBackground, .progressiveDownload], progress: nil, completed: nil)
         titleLabel.text = relaxObject.title
     }
 }
 
-extension UIImageView {
-    func downloadedFrom(url: URL) {
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            guard
-                let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
-                let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
-                let data = data, error == nil,
-                let image = UIImage(data: data)
-                else { return }
-            DispatchQueue.main.async() {
-                self.image = image
-            }
-            }.resume()
-    }
-    func downloadedFrom(link: String) {
-        guard let url = URL(string: link) else { return }
-        downloadedFrom(url: url)
-    }
-}
 

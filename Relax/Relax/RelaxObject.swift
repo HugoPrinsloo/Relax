@@ -21,7 +21,7 @@ struct RelaxObject {
     let title: String
     let thumbnailURL: String
     let soundURL: String
-    let availableDate: Date
+    let availableDate: Date?
     let type: Type
     let featured: Bool
     
@@ -40,7 +40,7 @@ struct RelaxObject {
         title = record["title"] as! String
         thumbnailURL = record["thumbnailURL"] as! String
         soundURL = record["soundURL"] as! String
-        availableDate = record["availableDate"] as! Date
+        availableDate = record["availableDate"] as? Date
         let f = record["featured"] as! String
         featured = f == "true" ? true : false
         type = typeStringToType(record["type"] as! String)

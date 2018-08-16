@@ -20,9 +20,12 @@
 		6E2F1987212322C100D3D1FB /* OceanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2F1986212322C100D3D1FB /* OceanViewController.swift */; };
 		6EB140932124A13B00746A1F /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB140922124A13B00746A1F /* CloudKit.framework */; };
 		6EB140952124B4E400746A1F /* NatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB140942124B4E400746A1F /* NatureViewController.swift */; };
+		8AB5B340A1957F6D0F05CBDA /* Pods_Relax.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3225DAF11765410757F6D6D1 /* Pods_Relax.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3225DAF11765410757F6D6D1 /* Pods_Relax.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Relax.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		40D52597F0E638272DA7078D /* Pods-Relax.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Relax.release.xcconfig"; path = "Pods/Target Support Files/Pods-Relax/Pods-Relax.release.xcconfig"; sourceTree = "<group>"; };
 		6E2F19652122FFE100D3D1FB /* Relax.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Relax.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E2F19682122FFE100D3D1FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E2F196A2122FFE100D3D1FB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -39,6 +42,7 @@
 		6EB140902124A13900746A1F /* Relax.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Relax.entitlements; sourceTree = "<group>"; };
 		6EB140922124A13B00746A1F /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		6EB140942124B4E400746A1F /* NatureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatureViewController.swift; sourceTree = "<group>"; };
+		CA21E131DD2BF393E2202E4B /* Pods-Relax.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Relax.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Relax/Pods-Relax.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,18 +51,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EB140932124A13B00746A1F /* CloudKit.framework in Frameworks */,
+				8AB5B340A1957F6D0F05CBDA /* Pods_Relax.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		25EBBCE8D65043581F4EB394 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CA21E131DD2BF393E2202E4B /* Pods-Relax.debug.xcconfig */,
+				40D52597F0E638272DA7078D /* Pods-Relax.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		6E2F195C2122FFE100D3D1FB = {
 			isa = PBXGroup;
 			children = (
 				6E2F19672122FFE100D3D1FB /* Relax */,
 				6E2F19662122FFE100D3D1FB /* Products */,
 				6EB140912124A13B00746A1F /* Frameworks */,
+				25EBBCE8D65043581F4EB394 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				6EB140922124A13B00746A1F /* CloudKit.framework */,
+				3225DAF11765410757F6D6D1 /* Pods_Relax.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -122,9 +138,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6E2F19772122FFE300D3D1FB /* Build configuration list for PBXNativeTarget "Relax" */;
 			buildPhases = (
+				4220E6D31156B009BEB3D151 /* [CP] Check Pods Manifest.lock */,
 				6E2F19612122FFE100D3D1FB /* Sources */,
 				6E2F19622122FFE100D3D1FB /* Frameworks */,
 				6E2F19632122FFE100D3D1FB /* Resources */,
+				2A59401E3D28A52EE6EAC341 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -189,6 +207,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2A59401E3D28A52EE6EAC341 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Relax/Pods-Relax-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Relax/Pods-Relax-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4220E6D31156B009BEB3D151 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Relax-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6E2F19612122FFE100D3D1FB /* Sources */ = {
@@ -346,16 +403,14 @@
 		};
 		6E2F19782122FFE300D3D1FB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA21E131DD2BF393E2202E4B /* Pods-Relax.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Relax/Relax.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7VT5H6VPXH;
 				INFOPLIST_FILE = Relax/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hugoprinsloo.Relax;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -365,16 +420,14 @@
 		};
 		6E2F19792122FFE300D3D1FB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40D52597F0E638272DA7078D /* Pods-Relax.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Relax/Relax.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7VT5H6VPXH;
 				INFOPLIST_FILE = Relax/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hugoprinsloo.Relax;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;

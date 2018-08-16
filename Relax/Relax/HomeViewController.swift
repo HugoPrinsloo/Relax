@@ -14,6 +14,16 @@ class HomeViewController: UIViewController {
     private let contentManager = RelaxContentManager()
     private let type: Type = .featured
     
+    lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action:
+            #selector(HomeViewController.handleRefresh(_:)),
+                                 for: UIControl.Event.valueChanged)
+        refreshControl.tintColor = UIColor.red
+        return refreshControl
+    }()
+
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
@@ -25,6 +35,16 @@ class HomeViewController: UIViewController {
             }
         }
     }
+    
+    @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
+        contentManager.fetch { [weak self] in
+            DispatchQueue.main.async {
+                self?.collectionView.reloadData()
+            }
+        }
+        refreshControl.endRefreshing()
+    }
+
 }
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
